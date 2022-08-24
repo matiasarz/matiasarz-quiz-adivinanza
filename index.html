@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quien es mas rico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://www.vhv.rs/dpng/d/2-22345_signo-de-peso-png-transparent-png.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/083810b2a0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="contenedor">
+        <div class="flex-box-inicio start-container">
+            <div class="play">PLAY</div>
+        </div>
+        <div class="flex-box-preguntas game-container">
+            
+        </div>
+    </div>
+    
+    <template id="game-template">
+        <div class="pregunta-1">
+            <img src="">
+        </div>
+        <div class="pregunta-2">
+            <img src="">
+        </div>
+        <div class="name-one">
+            <p class="full-name"></p>
+            <p class="has"></p>
+            <p class="cash"></p>
+            <h3 class="h3-3"></h3>
+        </div>
+        <div class="options">
+            <p class="name-two"></p>
+            <p class="has">has</p>
+            <div class="richer">
+                More money than
+                <i class="fa-solid fa-sort-up"></i>
+            </div>
+            <div class="less-money">
+                Less money than
+                <i class="fa-solid fa-sort-down"></i>
+            </div>
+            <p class="left"></p>
+            <h3 class="h3-4"></h3>
+        </div>
+    </template>
+    
+    <template id="game-vs">
+        <div class="after-play">VS</div>
+    </template>
+    
+    <template id="game-over-template">
+        <div class="container-menu final-score">
+            <div class="score"></div>
+            <div class="menu">Menu</div>
+        </div>
+    </template>
+
+    <script src="index.js"></script>
+</body>
+</html>

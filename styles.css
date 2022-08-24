@@ -1,0 +1,340 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #222;
+}
+.contenedor {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url('http://4.bp.blogspot.com/-jfgEviFjbIc/VmgDC6NbvwI/AAAAAAAA--I/_2YV-ISdCYs/s1600/futbol.jpg') no-repeat center;
+    background-size: cover;
+}
+.flex-box-inicio {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+}
+.play {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    width: fit-content;
+    padding: 15px 25px;
+    text-align: center;
+    transition: transform 1s,border-color 1.5s,color .5s;
+    cursor: pointer;
+}
+
+.play:hover {
+    transform: scale(2);
+    border-color: #0c0;
+    color: #a00;
+    transition: transform 1s,border-color 1.5s,color .5s;
+}
+.options {
+    position: absolute;
+    z-index: 200;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+.name-one {
+    position: absolute;
+    z-index: 200;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+.name-one .full-name {
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0 30px;
+}
+.name-two {
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0 30px;
+}
+.name-1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+.options div {
+    color: #fff989;
+    font-weight: 700;
+    font-size: 15px;
+    border: 2px solid #eee;
+    border-radius: 25px;
+    background-color: #0004;
+    padding: 10px 40px;
+    margin: 15px auto;
+    cursor: pointer;
+}
+.options div:hover {
+    background: #fff;
+    color: #000;
+    transition: background .4s;
+}
+.options .fa-sort-up {
+    font-size: 30px;
+    margin-left: 10px;
+    color: #0c0;
+}
+.options .fa-sort-down {
+    font-size: 30px;
+    margin-left: 10px;
+    color: #c00;
+}
+.name-one p {
+    margin: 10px auto;
+}
+.has {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+.name-one .cash {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px;
+    color: #fff989;
+}
+.after-play {
+    font-weight: 700;
+    font-size: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.flex-box-preguntas {
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.pregunta-1,.pregunta-2 {
+    max-width: 50%;
+    min-width: 50%;
+    max-height: 100%;
+    flex-grow: 1;
+}
+.menu {
+    font-size: 30px;
+    font-weight: 700;
+    border: 2px solid #fff;
+    color: #fff;
+    background: #000;
+    padding: 10px 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 200;
+}
+.flex-box-preguntas .pregunta-1 img, .pregunta-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.contenedor::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0005;
+}
+.less-money p, .richer p {
+    color: #fff989;
+}
+.richer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.less-money {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* .less-money p {
+    col
+} */
+.score {
+    font-size: 80px;
+    font-weight: 700;
+    color: #fff;
+    background: #0009;
+    padding: 20px;
+    border: 4px solid #fff;
+}
+.final-score {
+    position: relative;
+    z-index: 100;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+/* Nuevos estilos revisar */
+
+.left {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+}
+.h3-3 {
+    position: absolute;
+    color: #fff;
+    font-size: 24px;
+    bottom: 0;
+    margin: 20px;
+}
+.h3-4 {
+    position: absolute;
+    color: #fff;
+    font-size: 24px;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    /* animation: score-up-and-down 2s; */
+}
+
+
+@media only screen and (max-width: 625px) {
+    .pregunta-1,.pregunta-2 {
+        max-width: 100%;
+        height: 50%;
+    }
+    .flex-box-preguntas .pregunta-1 img, .pregunta-2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+    .options {
+        color: #fff;
+        bottom: 0;
+        position: absolute;
+        z-index: 200;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+    }
+    .options div {
+        color: #fff989;
+        font-weight: 700;
+        border: 2px solid #fff;
+        border-radius: 30px;
+        background-color: #0004;
+        padding: 10px 30px;
+        margin: 20px auto;
+    }
+    .name-one {
+        position: absolute;
+        z-index: 200;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+    }
+    .name-one .full-name {
+        font-family: sans-serif;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .name-two {
+        font-family: sans-serif;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .score {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+        color: #fff;
+        background: #0009;
+        padding: 20px;
+    }
+    /* Nuevo agregado */
+    .h3-3 {
+        position: absolute;
+        color: #fff;
+        font-size: 16px;
+        bottom: 0;
+        margin: 10px;
+    }
+    .h3-4 {
+        position: absolute;
+        color: #fff;
+        font-size: 16px;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+        /* animation: score-up-and-down 2s; */
+    }
+    .left {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .after-play {
+        font-size: 25px;
+        padding: 30px;
+    }
+    .less-money p, .richer p {
+        font-size: 16px;
+    }
+    .name-one .cash {
+        font-size: 40px;
+    }
+}
