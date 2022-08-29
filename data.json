@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "Francesco Totti",
+        "imgUrl": "https://i.ibb.co/hM4pjnd/totti.jpg",
+        "wealth": 89000000
+    },
+    {
+        "id": 2,
+        "name": "Mathieu Flamini",
+        "imgUrl": "https://i.ibb.co/b2v9bsh/flamini.jpg",
+        "wealth": 97000000
+    },
+    {
+        "id": 3,
+        "name": "Andrés Iniesta",
+        "imgUrl": "https://i.ibb.co/2F0mY0z/iniesta.jpg",
+        "wealth": 106000000
+    },
+    {
+        "id": 4,
+        "name": "Gareth Bale",
+        "imgUrl": "https://i.ibb.co/J3zYMTY/bale.jpg",
+        "wealth": 164000000
+    },
+    {
+        "id": 5,
+        "name": "Zlatan Ibrahimovic",
+        "imgUrl": "https://i.ibb.co/LhbLhZQ/zatlan.jpg",
+        "wealth": 168000000
+    },
+    {
+        "id": 6,
+        "name": "Lionel Messi",
+        "imgUrl": "https://i.ibb.co/6DntMss/messi.jpg",
+        "wealth": 355000000
+    },
+    {
+        "id": 7,
+        "name": "David Beckham",
+        "imgUrl": "https://i.ibb.co/FsNJPyM/beckham.jpg",
+        "wealth": 400000000
+    },
+    {
+        "id": 8,
+        "name": "Cristiano Ronaldo",
+        "imgUrl": "https://i.ibb.co/GnV6gQC/cristiano.jpg",
+        "wealth": 1000000000
+    },
+    {
+        "id": 9,
+        "name": "Faiq Bolkiah",
+        "imgUrl": "https://i.ibb.co/s5ZT0wd/bolkhia.jpg",
+        "wealth": 1800000000
+    },
+    {
+        "id": 10,
+        "name": "Roger Federer",
+        "imgUrl": "https://i.ibb.co/sJJXhsS/federer.jpg",
+        "wealth": 106300000
+    },
+    {
+        "id": 11,
+        "name": "Lebron James",
+        "imgUrl": "https://i.ibb.co/hcYXGmX/lebron.jpg",
+        "wealth": 88200000
+    },
+    {
+        "id": 12,
+        "name": "Dwayne Johnson 'The Rock'",
+        "imgUrl": "https://i.ibb.co/9ZNcqnY/rock.jpg",
+        "wealth": 87500000
+    },
+    {
+        "id": 13,
+        "name": "James Patterson",
+        "imgUrl": "https://i.ibb.co/bPTn8td/patterson.jpg",
+        "wealth": 80000000
+    },
+    {
+        "id": 14,
+        "name": "Stephen Curry",
+        "imgUrl": "https://i.ibb.co/F0tq5yj/curry.jpg",
+        "wealth": 74400000
+    },
+    {
+        "id": 15,
+        "name": "Ariana Grande",
+        "imgUrl": "https://i.ibb.co/qgvrfkP/grande.jpg",
+        "wealth": 72000000
+    },
+    {
+        "id": 16,
+        "name": "Ryan Reynolds",
+        "imgUrl": "https://i.ibb.co/SyKp4Nt/ryan.jpg",
+        "wealth": 71500000
+    },
+    {
+        "id": 17,
+        "name": "Gordon Ramsay",
+        "imgUrl": "https://i.ibb.co/HXMVrNN/gordon.jpg",
+        "wealth": 70000000
+    },
+    {
+        "id": 18,
+        "name": "Jonas Brothers",
+        "imgUrl": "https://i.ibb.co/vZgGhdS/jonas.jpg",
+        "wealth": 68500000
+    },
+    {
+        "id": 19,
+        "name": "The Chainsmokers",
+        "imgUrl": "https://i.ibb.co/C7B306F/smokers.jpg",
+        "wealth": 68000000
+    },
+    {
+        "id": 20,
+        "name": "Ed Sheeran",
+        "imgUrl": "https://i.ibb.co/93f9T01/edsheeran.jpg",
+        "wealth": 64000000
+    },
+    {
+        "id": 21,
+        "name": "Kevin Durant",
+        "imgUrl": "https://i.ibb.co/715HW6v/durant.jpg",
+        "wealth": 63900000
+    },
+    {
+        "id": 22,
+        "name": "Taylor Swift",
+        "imgUrl": "https://i.ibb.co/B45HCwP/taylor.jpg",
+        "wealth": 63500000
+    },
+    {
+        "id": 23,
+        "name": "J.K. Rowlilng",
+        "imgUrl": "https://i.ibb.co/TBYJ7bp/jk.jpg",
+        "wealth": 60000000
+    },
+    {
+        "id": 24,
+        "name": "Ben Affleck",
+        "imgUrl": "https://i.ibb.co/x65cpPF/ben.jpg",
+        "wealth": 55000000
+    },
+    {
+        "id": 25,
+        "name": "Shawn Mendes",
+        "imgUrl": "https://i.ibb.co/Nxrq8R2/mendez.jpg",
+        "wealth": 54500000
+    },
+    {
+        "id": 26,
+        "name": "Vin Diesel",
+        "imgUrl": "https://i.ibb.co/c2vprLz/diesel.jpg",
+        "wealth": 54000000
+    },
+    {
+        "id": 27,
+        "name": "Bilie Elish",
+        "imgUrl": "https://i.ibb.co/xCqpFp8/billie.jpg",
+        "wealth": 53000000
+    },
+    {
+        "id": 28,
+        "name": "Drake",
+        "imgUrl": "https://i.ibb.co/wdwXr5C/drake.jpg",
+        "wealth": 49000000
+    },
+    {
+        "id": 29,
+        "name": "Conor Mcgregor",
+        "imgUrl": "https://i.ibb.co/G2g7y1J/conor.jpg",
+        "wealth": 48000000
+    },
+    {
+        "id": 30,
+        "name": "Neymar",
+        "imgUrl": "https://i.ibb.co/6ZCVR8j/neymar.jpg",
+        "wealth": 164000000
+    }
+]
