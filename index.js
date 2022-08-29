@@ -3,9 +3,11 @@ const startContainer = document.querySelector('.startContainer');
 const optionContainer = document.querySelector('.optionContainer');
 const gameContainer = document.querySelector('.gameContainer');
 
-const templateGame = document.getElementById('game-template');
-const templateVs = document.getElementById('game-vs');
-const templateGameOver = document.getElementById('game-over-template');
+const gameContainerTemplate = document.getElementById('gameContainerTemplate');
+const gameVsTemplate = document.getElementById('gameVsContainerTemplate');
+const gameOverContainerTemplate = document.getElementById(
+    'gameOverContainerTemplate'
+);
 
 class Persona {
     constructor(nombre, patrimonio, img) {
@@ -71,9 +73,9 @@ const highScore = () => {
 
 const gameOver = () => {
     gameContainer.textContent = '';
-    const cloneGameOver = templateGameOver.content.cloneNode(true);
+    const cloneGameOver = gameOverContainerTemplate.content.cloneNode(true);
     cloneGameOver.querySelector(
-        '.final-score .score'
+        '.finalScore .score'
     ).textContent = `Your Score ${contadorPuntos}!`;
     contadorPuntos = 0;
     gameContainer.appendChild(cloneGameOver);
@@ -87,7 +89,7 @@ const ramdonNumbers = () => {
 };
 
 buttonPlay.addEventListener('click', () => {
-    const cloneVs = templateVs.content.cloneNode(true);
+    const cloneVs = gameVsTemplate.content.cloneNode(true);
     startContainer.replaceChild(cloneVs, buttonPlay);
 
     ramdonNumbers();
@@ -101,46 +103,49 @@ buttonPlay.addEventListener('click', () => {
 });
 
 const afterPlay = (id1, id2) => {
-    const cloneGame = templateGame.content.cloneNode(true);
+    const cloneGame = gameContainerTemplate.content.cloneNode(true);
     const fragment = document.createDocumentFragment();
     if (cloneGame.hasChildNodes()) {
+        // imagenes
         cloneGame.querySelector(
-            '.pregunta-1 img'
+            '.firstImage img'
         ).src = `${personas[id1].imagen}`;
         cloneGame.querySelector(
-            '.pregunta-2 img'
+            '.secondImage img'
         ).src = `${personas[id2].imagen}`;
 
+        // preguntas
         cloneGame.querySelector(
-            '.name-one .full-name'
+            '.infoFirstImage .name'
         ).textContent = `"${personas[id1].nombre}"`;
-        cloneGame.querySelector('.name-one .has').textContent = `has`;
+        // cloneGame.querySelector('.infoFirstImage .has').textContent = `has`;
 
-        cloneGame.querySelector('.name-one .cash').textContent =
+        cloneGame.querySelector('.infoFirstImage .cash').textContent =
             personas[id1].patrimonio.toLocaleString('en');
 
+        // nombres
         cloneGame.querySelector(
-            '.options .name-two'
+            '.infoSecondImage .name'
         ).textContent = `"${personas[id2].nombre}"`;
         cloneGame.querySelector(
-            '.options .left'
+            '.infoSecondImage .left'
         ).textContent = `"${personas[id1].nombre}"`;
 
-        cloneGame.querySelector('.name-one .h3-3').textContent =
+        cloneGame.querySelector('.infoFirstImage .score').textContent =
             localStorage.getItem('puntos') === null
                 ? `High Score: ` + 0
                 : `High Score: ${localStorage.getItem('puntos')}`;
         cloneGame.querySelector(
-            '.options .h3-4'
+            '.infoSecondImage .score'
         ).textContent = `Score: ${contadorPuntos}`;
     }
     patrimonios = [personas[id1].patrimonio, personas[id2].patrimonio];
 
     cloneGame
-        .querySelector('.options .richer')
+        .querySelector('.infoSecondImage .more')
         .addEventListener('click', richer);
     cloneGame
-        .querySelector('.options .less-money')
+        .querySelector('.infoSecondImage .less')
         .addEventListener('click', lessMoney);
 
     fragment.appendChild(cloneGame);
@@ -193,3 +198,34 @@ const menu = () => {
     startContainer.appendChild(buttonPlay);
     gameContainer.appendChild(startContainer);
 };
+
+// https://i.ibb.co/9ZNcqnY/rock.jpg
+// https://i.ibb.co/SyKp4Nt/ryan.jpg
+// https://i.ibb.co/C7B306F/smokers.jpg
+// https://i.ibb.co/B45HCwP/taylor.jpg
+// https://i.ibb.co/hM4pjnd/totti.jpg
+// https://i.ibb.co/LhbLhZQ/zatlan.jpg
+// https://i.ibb.co/J3zYMTY/bale.jpg
+// https://i.ibb.co/FsNJPyM/beckham.jpg
+// https://i.ibb.co/x65cpPF/ben.jpg
+// https://i.ibb.co/xCqpFp8/billie.jpg
+// https://i.ibb.co/s5ZT0wd/bolkhia.jpg
+// https://i.ibb.co/G2g7y1J/conor.jpg
+// https://i.ibb.co/GnV6gQC/cristiano.jpg
+// https://i.ibb.co/F0tq5yj/curry.jpg
+// https://i.ibb.co/c2vprLz/diesel.jpg
+// https://i.ibb.co/wdwXr5C/drake.jpg
+// https://i.ibb.co/715HW6v/durant.jpg
+// https://i.ibb.co/93f9T01/edsheeran.jpg
+// https://i.ibb.co/sJJXhsS/federer.jpg
+// https://i.ibb.co/b2v9bsh/flamini.jpg
+// https://i.ibb.co/HXMVrNN/gordon.jpg
+// https://i.ibb.co/qgvrfkP/grande.jpg
+// https://i.ibb.co/2F0mY0z/iniesta.jpg
+// https://i.ibb.co/TBYJ7bp/jk.jpg
+// https://i.ibb.co/vZgGhdS/jonas.jpg
+// https://i.ibb.co/hcYXGmX/lebron.jpg
+// https://i.ibb.co/Nxrq8R2/mendez.jpg
+// https://i.ibb.co/6DntMss/messi.jpg
+// https://i.ibb.co/6ZCVR8j/neymar.jpg
+// https://i.ibb.co/bPTn8td/patterson.jpg

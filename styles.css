@@ -41,7 +41,7 @@
     color: #a00;
     transition: transform 1s,border-color 1.5s,color .5s;
 }
-.options {
+.infoSecondImage {
     position: absolute;
     z-index: 200;
     right: 0;
@@ -52,7 +52,7 @@
     width: 50%;
     height: 100%;
 }
-.name-one {
+.infoFirstImage {
     position: absolute;
     z-index: 200;
     left: 0;
@@ -62,7 +62,7 @@
     width: 50%;
     height: 100%;
 }
-.name-one .full-name {
+.infoFirstImage .name {
     font-family: sans-serif;
     color: #fff;
     font-size: 40px;
@@ -71,7 +71,7 @@
     text-align: center;
     margin: 0 30px;
 }
-.name-two {
+.infoSecondImage .name {
     font-family: sans-serif;
     color: #fff;
     font-size: 40px;
@@ -86,7 +86,7 @@
     font-size: 40px;
     letter-spacing: 1px;
 }
-.options div {
+.infoSecondImage div {
     color: #fff989;
     font-weight: 700;
     font-size: 15px;
@@ -97,22 +97,22 @@
     margin: 15px auto;
     cursor: pointer;
 }
-.options div:hover {
+.infoSecondImage div:hover {
     background: #fff;
     color: #000;
     transition: background .4s;
 }
-.options .fa-sort-up {
+.infoSecondImage .fa-sort-up {
     font-size: 30px;
     margin-left: 10px;
     color: #0c0;
 }
-.options .fa-sort-down {
+.infoSecondImage .fa-sort-down {
     font-size: 30px;
     margin-left: 10px;
     color: #c00;
 }
-.name-one p {
+.infoFirstImage p {
     margin: 10px auto;
 }
 .has {
@@ -120,14 +120,14 @@
     font-weight: 700;
     color: #fff;
 }
-.name-one .cash {
+.infoFirstImage .cash {
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 1px;
     padding: 10px;
     color: #fff989;
 }
-.after-play {
+.afterPlay {
     font-weight: 700;
     font-size: 20px;
     border: 2px solid #fff;
@@ -145,7 +145,7 @@
     flex-wrap: wrap;
     overflow: hidden;
 }
-.pregunta-1,.pregunta-2 {
+.firstImage,.secondImage {
     max-width: 50%;
     min-width: 50%;
     max-height: 100%;
@@ -162,7 +162,7 @@
     position: relative;
     z-index: 200;
 }
-.optionContainer .pregunta-1 img, .pregunta-2 img {
+.optionContainer .firstImage img, .secondImage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -177,23 +177,23 @@
     bottom: 0;
     background: #0005;
 }
-.less-money p, .richer p {
+.less p, .more p {
     color: #fff989;
 }
-.richer {
+.more {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.less-money {
+.less {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-/* .less-money p {
+/* .less p {
     col
 } */
-.score {
+.finalScore .score {
     font-size: 80px;
     font-weight: 700;
     color: #fff;
@@ -201,7 +201,7 @@
     padding: 20px;
     border: 4px solid #fff;
 }
-.final-score {
+.finalScore {
     position: relative;
     z-index: 100;
     height: 100%;
@@ -219,38 +219,36 @@
     font-size: 22px;
     color: #fff;
     font-weight: 700;
-    /* text-transform: uppercase; */
 }
-.h3-3 {
+.infoFirstImage .score {
     position: absolute;
     color: #fff;
     font-size: 24px;
     bottom: 0;
     margin: 20px;
 }
-.h3-4 {
+.infoSecondImage .score {
     position: absolute;
     color: #fff;
     font-size: 24px;
     bottom: 0;
     right: 0;
     margin: 20px;
-    /* animation: score-up-and-down 2s; */
 }
 
 
 @media only screen and (max-width: 625px) {
-    .pregunta-1,.pregunta-2 {
+    .firstImage,.secondImage {
         max-width: 100%;
         height: 50%;
     }
-    .optionContainer .pregunta-1 img, .pregunta-2 img {
+    .optionContainer .firstImage img, .secondImage img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: top;
     }
-    .options {
+    .infoSecondImage {
         color: #fff;
         bottom: 0;
         position: absolute;
@@ -262,7 +260,7 @@
         width: 100%;
         height: 50%;
     }
-    .options div {
+    .infoSecondImage div {
         color: #fff989;
         font-weight: 700;
         border: 2px solid #fff;
@@ -271,7 +269,7 @@
         padding: 10px 30px;
         margin: 20px auto;
     }
-    .name-one {
+    .infoFirstImage {
         position: absolute;
         z-index: 200;
         left: 0;
@@ -281,7 +279,7 @@
         width: 100%;
         height: 50%;
     }
-    .name-one .full-name {
+    .infoFirstImage name {
         font-family: sans-serif;
         color: #fff;
         font-size: 30px;
@@ -289,7 +287,7 @@
         letter-spacing: 1px;
         text-align: center;
     }
-    .name-two {
+    .name {
         font-family: sans-serif;
         color: #fff;
         font-size: 30px;
@@ -297,7 +295,7 @@
         letter-spacing: 1px;
         text-align: center;
     }
-    .score {
+    .infoFirstImage .score {
         text-align: center;
         font-size: 40px;
         font-weight: 700;
@@ -306,14 +304,14 @@
         padding: 20px;
     }
     /* Nuevo agregado */
-    .h3-3 {
+    .infoSecondImage .score {
         position: absolute;
         color: #fff;
         font-size: 16px;
         bottom: 0;
         margin: 10px;
     }
-    .h3-4 {
+    .infoSecondImage .score {
         position: absolute;
         color: #fff;
         font-size: 16px;
@@ -327,14 +325,14 @@
     }
 }
 @media only screen and (min-width: 900px) {
-    .after-play {
+    .afterPlay {
         font-size: 25px;
         padding: 30px;
     }
-    .less-money p, .richer p {
+    .less p, .more p {
         font-size: 16px;
     }
-    .name-one .cash {
+    .infoFirstImage .cash {
         font-size: 40px;
     }
 }
