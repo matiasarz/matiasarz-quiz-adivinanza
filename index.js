@@ -8,15 +8,14 @@ const gameVsTemplate = document.getElementById('gameVsContainerTemplate');
 const gameOverContainerTemplate = document.getElementById(
     'gameOverContainerTemplate'
 );
-let personas = [];
 
+let personas = [];
 const getData = async () => {
     const response = await fetch('data.json');
     const data = await response.json();
 
     return (personas = data);
 };
-
 getData();
 
 let id = [];
@@ -45,19 +44,24 @@ const ramdonNumbers = () => {
 
     return (id = [idA, idB]);
 };
+const randomNumbersRepeated = () => {
+    optionContainer.textContent = '';
+    contadorPuntos++;
+    if (id[0] === id[1]) {
+        id[1] = Math.ceil(Math.random() * personas.length);
+        afterPlay(id[0], id[1]);
+    } else afterPlay(id[0], id[1]);
+};
 
 buttonPlay.addEventListener('click', () => {
     const cloneVs = gameVsTemplate.content.cloneNode(true);
     startContainer.replaceChild(cloneVs, buttonPlay);
 
     ramdonNumbers();
-
     if (id[0] === id[1]) {
         id[1] = Math.ceil(Math.random() * personas.length);
         afterPlay(id[0], id[1]);
-    } else {
-        afterPlay(id[0], id[1]);
-    }
+    } else afterPlay(id[0], id[1]);
 });
 
 const afterPlay = (idA, idB) => {
@@ -66,8 +70,6 @@ const afterPlay = (idA, idB) => {
 
     let personA = personas.find((persona) => persona.id === idA);
     let personB = personas.find((persona) => persona.id === idB);
-
-    console.log('personaA: ', personA, 'personaB: ', personB);
 
     if (cloneGameContainer.hasChildNodes()) {
         // imagenes
@@ -117,45 +119,62 @@ const afterPlay = (idA, idB) => {
     gameContainer.appendChild(optionContainer);
 };
 
+const upDateAnswer = () => {
+    document
+        .querySelector('.startContainer .afterPlay')
+        .classList.add('active');
+    document.querySelector('.startContainer .afterPlay').innerHTML =
+        '<i class="fa-solid fa-check" style="color: #fff; font-size: 30px"></i>';
+};
+
+const resetDefault = () => {
+    document
+        .querySelector('.startContainer .afterPlay')
+        .classList.remove('active');
+    document.querySelector('.startContainer .afterPlay').innerText = 'VS';
+};
+
+const wrongAnswer = () => {
+    document.querySelector('.startContainer .afterPlay').style.backgroundColor =
+        '#f00';
+    document.querySelector('.startContainer .afterPlay').style.border =
+        '2px solid #fff';
+    document.querySelector('.startContainer .afterPlay').style.padding =
+        '25px 30px';
+    document.querySelector('.startContainer .afterPlay').style.fontSize =
+        '30px';
+    document.querySelector('.startContainer .afterPlay').style.fontWeight =
+        '600';
+    document.querySelector('.startContainer .afterPlay').innerText = 'X';
+};
+
 const richer = () => {
     ramdonNumbers();
     if (patrimonios[1] > patrimonios[0]) {
-        contadorPuntos++;
-        optionContainer.textContent = '';
-        if (id[0] === id[1]) {
-            id[1] = Math.ceil(Math.random() * personas.length);
-            console.log('son iguales id1: ', id[0]);
-            console.log('son iguales id0: ', id[1]);
-            afterPlay(id[0], id[1]);
-        } else {
-            console.log('id1 sin cambio: ', id[0]);
-            console.log('id0 sin cambio: ', id[1]);
-            afterPlay(id[0], id[1]);
-        }
+        upDateAnswer();
+        setTimeout(() => {
+            resetDefault();
+            randomNumbersRepeated();
+        }, 1000);
     } else {
         localStorage.getItem('puntos') > contadorPuntos || highScore();
-        gameOver();
+        wrongAnswer();
+        setTimeout(() => gameOver(), 1000);
     }
 };
 
 const lessMoney = () => {
     ramdonNumbers();
     if (patrimonios[1] < patrimonios[0]) {
-        contadorPuntos++;
-        optionContainer.textContent = '';
-        if (id[0] === id[1]) {
-            id[1] = Math.ceil(Math.random() * personas.length);
-            console.log('son iguales id1: ', id[0]);
-            console.log('son iguales id0: ', id[1]);
-            afterPlay(id[0], id[1]);
-        } else {
-            console.log('id1 sin cambio: ', id[0]);
-            console.log('id0 sin cambio: ', id[1]);
-            afterPlay(id[0], id[1]);
-        }
+        upDateAnswer();
+        setTimeout(() => {
+            resetDefault();
+            randomNumbersRepeated();
+        }, 1000);
     } else {
         localStorage.getItem('puntos') > contadorPuntos || highScore();
-        gameOver();
+        wrongAnswer();
+        setTimeout(() => gameOver(), 1000);
     }
 };
 
